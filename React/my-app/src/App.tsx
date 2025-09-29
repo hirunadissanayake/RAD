@@ -1,33 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import DetailsCard from "./components/Details"
 
-function App() {
-  const [count, setCount] = useState(0)
 
+const App = () => {
+  let name = "shamodha"
+
+  // jsx: JavaScript xml
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <DetailsCard>
+        <ul>
+          <li>Java</li>
+          <li>Node</li>
+          <li>React</li>
+        </ul>
+      </DetailsCard>
+      <DetailsCard name={"hello"} />
+      <DetailsCard />
+      <h1
+        style={{
+          backgroundColor: "#000"
+        }}
+      >
+        Hello, React
+      </h1>
+      <h2 className="test">This is my web application</h2>
+      <h2 className="test">{name}</h2>
+      <h3>Hi Hi</h3>
     </>
   )
 }
